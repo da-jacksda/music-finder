@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono|Roboto">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <img id="ball" src="./images/cube.png">
+    <script src="./main.js"></script>
+    <div class="container">
+        <header>
+            <h1>
+                Music finder
+            </h1>
+            <h2>
+                Made with <img src="images/heart.png"> by da_jacksda
+            </h2>
+        </header>       
+        <div id="search-container">
+            <input id="search" type="text" autocomplete="off" placeholder="enter artist" 
+            onfocus="focusSearch()" onblur="unFocusSearch()">
+            <script>setInterval(() => getArtistSuggestions(), 100)</script>
+        </div>
+        <div class="artist-suggestions">
+            <div class="suggestion" onclick="clickMethod(0)">
+                <img src="./images/dark-pixel.png" class="suggestion-image">
+                <div class="suggestion-artist-name"></div>
+            </div>
+            <div class="suggestion" onclick="clickMethod(1)">
+                <img src="./images/dark-pixel.png" class="suggestion-image">
+                <div class="suggestion-artist-name"></div>
+            </div>
+            <div class="suggestion" onclick="clickMethod(2)">
+                <img src="./images/dark-pixel.png" class="suggestion-image">
+                <div class="suggestion-artist-name"></div>
+            </div>
+            <div class="suggestion" onclick="clickMethod(3)">
+                <img src="./images/dark-pixel.png" class="suggestion-image">
+                <div class="suggestion-artist-name"></div>
+            </div>
+            <div class="suggestion" onclick="clickMethod(4)">
+                <img src="./images/dark-pixel.png" class="suggestion-image">
+                <div class="suggestion-artist-name"></div>
+            </div>
+        </div>
+        <div class="searched-artist-card">
+            <img id="artist-img" src="./images/dark-pixel.png">
+            <div class="searched-artist-card-info">
+                <div id="searched-artist-info">
+                </div>
+                <iframe id="song-iframe"></iframe>
+                <div id="searched-artist-genres">
+                </div>
+            </div>
+        </div>
+        <div id="recommended-artists">           
+        </div>
+        <footer id="info">
+            <div>
+                <p>Contact me!</p>
+                <p><a class="contact" href="mailto:jackunasd231@gmail.com">Gmail</a> 
+                    | 
+                    <a class="contact" href="https://github.com/da-jacksda" target="_blank">GitHub</a></p>
+            </div>
+            <div>
+                <p>Powered by</p>
+                <p>Spotify API</p>
+            </div>
+        </footer>                  
+    </div>        
+</body>
+</html>
